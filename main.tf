@@ -21,10 +21,11 @@ module "lambda_functions" {
       memory_size = 128
     },
     {
-      function_name  = "function3"
-      handler        = "com.example.MyHandler::handleRequest"
-      runtime        = "java11"
-      code_directory = "function3/src/main/java/com/example"
+      function_name = "function3"
+      handler       = "com.example.MyHandler::handleRequest"
+      runtime       = "java"
+      #code_directory = "function3/src/main/java/com/example"
+      code_directory = "function3"
       role           = "arn:aws:iam::558940753150:role/lambda_custom_role"
 
       memory_size = 128
