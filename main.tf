@@ -22,7 +22,7 @@ module "lambda_functions" {
     },
     {
       function_name  = "function3"
-      handler        = "com.example.MyHandler"
+      handler        = "com.example.MyHandler::handleRequest"
       runtime        = "java11"
       code_directory = "function3/src/main/java/com/example"
       role           = "arn:aws:iam::558940753150:role/lambda_custom_role"
