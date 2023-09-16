@@ -1,3 +1,11 @@
-output "lambda_functions" {
-  value = { for c in var.function_configurations : c.function_name => aws_lambda_function.lambda_functions[c.function_name] }
+variable "function_configurations" {
+  type = list(object({
+    function_name   = string
+    handler         = string
+    runtime         = string
+    code_directory  = string
+    role = string
+    
+    memory_size = number
+  }))
 }
