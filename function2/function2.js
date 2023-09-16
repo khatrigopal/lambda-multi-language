@@ -1,4 +1,4 @@
-exports.handler = async (event) => {
+exports.lambda_handler = async (event) => {
   console.log('Hello, Lambda function executed!', event);
   return {
     statusCode: 200,
