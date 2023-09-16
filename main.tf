@@ -14,7 +14,7 @@ module "lambda_functions" {
     {
       function_name   = "function2"
       handler         = "function2.lambda_handler"
-      runtime         = "python3.8"
+      runtime         = "nodejs14.x"
       code_directory  = "function2"
       role = "arn:aws:iam::558940753150:role/lambda_custom_role"
      
