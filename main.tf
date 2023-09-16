@@ -19,6 +19,15 @@ module "lambda_functions" {
       role = "arn:aws:iam::558940753150:role/lambda_custom_role"
      
       memory_size        = 128
+    },
+    {
+      function_name   = "function3"
+      handler         = "com.example.MyHandler"
+      runtime         = "java11"
+      code_directory  = "function3/src/main/java/com/example"
+      role = "arn:aws:iam::558940753150:role/lambda_custom_role"
+     
+      memory_size        = 128
     }
   ]
 }
@@ -30,4 +39,8 @@ output "function1_arn" {
 
 output "function2_arn" {
   value = module.lambda_functions.lambda_functions["function2"].arn
+}
+
+output "function2_arn" {
+  value = module.lambda_functions.lambda_functions["function3"].arn
 }
