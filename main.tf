@@ -29,7 +29,7 @@ module "lambda_functions" {
       role           = "arn:aws:iam::558940753150:role/lambda_custom_role"
 
       memory_size = 128
-    }
+    },
     {
       function_name = "function4"
       handler       = "com.example.HelloWorld::handleRequest"
