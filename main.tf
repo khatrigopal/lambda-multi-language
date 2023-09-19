@@ -35,7 +35,7 @@ module "lambda_functions" {
       handler       = "com.example.HelloWorld::handleRequest"
       runtime       = "java17"
       #code_directory = "function3/src/main/java/com/example"
-      code_directory = "function4"
+      code_directory = "fumction4"
       role           = "arn:aws:iam::558940753150:role/lambda_custom_role"
 
       memory_size = 128
