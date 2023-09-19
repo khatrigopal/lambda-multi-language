@@ -33,7 +33,7 @@ module "lambda_functions" {
     },
     {
       function_name = "function4"
-      handler       = "com.example.HelloWorld::handleRequest"
+      handler       = "example.HelloWorld::handleRequest"
       runtime       = "java17"
       #code_directory = "function3/src/main/java/com/example"
       code_directory = "fumction4"
