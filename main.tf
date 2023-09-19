@@ -30,6 +30,16 @@ module "lambda_functions" {
 
       memory_size = 128
     }
+    {
+      function_name = "function4"
+      handler       = "com.example.HelloWorld::handleRequest"
+      runtime       = "java17"
+      #code_directory = "function3/src/main/java/com/example"
+      code_directory = "function4"
+      role           = "arn:aws:iam::558940753150:role/lambda_custom_role"
+
+      memory_size = 128
+    } 
   ]
 }
 
@@ -44,4 +54,8 @@ output "function2_arn" {
 
 output "function3_arn" {
   value = module.lambda_functions.lambda_functions["function3"].arn
+}
+
+output "function4_arn" {
+  value = module.lambda_functions.lambda_functions["function4"].arn
 }
