@@ -1,6 +1,7 @@
 module "lambda_functions" {
   source = "./modules/lambda-functions"
 
+
   function_configurations = [
     {
       function_name  = "function1"
