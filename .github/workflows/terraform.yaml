@@ -2,7 +2,7 @@ name: Terraform GitHub Actions
 
 on:
    push:
-    branches: [master]
+    branches: [main]
 jobs:
   Deploy_Resources:
     runs-on: ubuntu-20.04
@@ -36,6 +36,11 @@ jobs:
       - name: Terraform Plan
         id: plan
         run: terraform plan -no-color
+        continue-on-error: true
+
+      - name: Terraform Apply
+        id: apply
+        run: terraform apply -no-color
         continue-on-error: true
         
       
